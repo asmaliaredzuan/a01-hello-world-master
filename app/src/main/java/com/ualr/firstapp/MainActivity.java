@@ -21,7 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO 06. Avoid updating the text label (userMsgTV) when the text field (userInputET) is empty
     public void showTextMessage(View view) {
-        mBinding.userMsgTV.setText(mBinding.userInputET.getText().toString());
+        //mBinding.userMsgTV.setText(mBinding.userInputET.getText().toString());
+
+        if (!mBinding.userInputET.getText().toString().equals("")) {
+            mBinding.userMsgTV.setText(mBinding.userInputET.getText().toString());
+        }
+
+
+
     }
 
     // TODO 07. Create a new method called cleanTextField to delete the text inside the text field
